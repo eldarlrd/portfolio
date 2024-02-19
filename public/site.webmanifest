@@ -1,0 +1,22 @@
+{
+  "name": "eldarlrd's Portfolio",
+  "short_name": "Portfolio",
+  "dir": "ltr",
+  "lang": "en",
+  "categories": [
+    "personalization"
+  ],
+  "orientation": "natural",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "description": "eldarlrd's portfolio",
+  "start_url": "https://eldarlrd.github.io/portfolio/",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ]
+}
