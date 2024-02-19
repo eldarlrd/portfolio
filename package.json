@@ -20,18 +20,18 @@
     "pretty": "prettier '{src,__{tests,mocks,snapshots}__}/**/*.{ts,tsx}' --write",
     "format": "pnpm lint --fix && pnpm style --fix && pnpm pretty"
   },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-stylus/standard"
+    ]
+  },
   "prettier": {
     "singleQuote": true,
     "jsxSingleQuote": true,
     "bracketSameLine": true,
     "trailingComma": "none",
     "arrowParens": "avoid"
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-standard",
-      "stylelint-stylus/standard"
-    ]
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
