@@ -12,6 +12,7 @@
     "plugin:import/typescript",
     "plugin:n/recommended",
     "plugin:promise/recommended",
+    "eslint-config-riot",
     "prettier"
   ],
   "settings": {
@@ -40,7 +41,6 @@
     "import/consistent-type-specifier-style": [2, "prefer-inline"],
     "import/extensions": [2, "ignorePackages"],
     "import/no-useless-path-segments": 2,
-    "import/no-default-export": 2,
     "import/group-exports": 2,
     "n/no-missing-import": 0,
     "no-unused-vars": 0,

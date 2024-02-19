@@ -4,6 +4,7 @@
 > Portfolio | eldarlrd is a website built with
 > - **[TypeScript](https://typescriptlang.org)**
 > - **[Riot](https://riot.js.org)**
+> - **[Normalize](https://necolas.github.io/normalize.css)**
 > - **[Vite](https://vitejs.dev)**
 >
 > to represent skill sets and abilities.
@@ -25,7 +26,7 @@ pnpm build
 ```sh
 pnpm preview
 ```
-### Format Code (ESLint + Prettier)
+### Format Code (ESLint + Stylelint + Prettier)
 ```sh
 pnpm format
 ```

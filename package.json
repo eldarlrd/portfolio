@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "keywords": [
     "portfolio"
@@ -16,8 +16,15 @@
     "preview": "vite preview",
     "deployer": "pnpm build && gh-pages -b prod -m 'build(prod): deployment' -d dist",
     "lint": "eslint src --ext .ts,.tsx --report-unused-disable-directives",
+    "style": "stylelint 'src/**/*.{css,pcss,scss,sass,less,styl}'",
     "pretty": "prettier '{src,__{tests,mocks,snapshots}__}/**/*.{ts,tsx}' --write",
-    "format": "pnpm lint --fix && pnpm pretty"
+    "format": "pnpm lint --fix && pnpm style --fix && pnpm pretty"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-stylus/standard"
+    ]
   },
   "prettier": {
     "singleQuote": true,
@@ -26,11 +33,17 @@
     "trailingComma": "none",
     "arrowParens": "avoid"
   },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "riot": "^9.1.3",
+    "stylus": "^0.62.0"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-config-riot": "^4.1.2",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
@@ -38,8 +51,10 @@
     "eslint-plugin-promise": "^6.1.1",
     "gh-pages": "^6.1.1",
     "prettier": "^3.2.5",
-    "riot": "^9.1.3",
     "rollup-plugin-riot": "^9.0.2",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-stylus": "^1.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.1.0"
   }

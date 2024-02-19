@@ -1,10 +1,10 @@
-import * as riot from 'riot'
+import { component } from 'riot';
 
-import App from '@/app.riot'
+import 'normalize.css';
+import '@/app.styl';
+import App from '@/app.riot';
 
-const mountApp = riot.component(App)
+const mountApp = component(App);
+const app = document.getElementById('app');
 
-mountApp(
-  document.getElementById('app'),
-  { message: 'Hello World', items: [] }
-)
+if (app) mountApp(app, { message: 'Hello World!' });
