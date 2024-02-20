@@ -3,8 +3,8 @@
 
 > Portfolio | eldarlrd is a website built with
 > - **[TypeScript](https://typescriptlang.org)**
-> - **[Riot](https://riot.js.org)**
 > - **[Normalize](https://necolas.github.io/normalize.css)**
+> - **[Riot](https://riot.js.org)**
 > - **[Vite](https://vitejs.dev)**
 >
 > to represent skill sets and abilities.
