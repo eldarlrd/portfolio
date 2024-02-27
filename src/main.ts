@@ -7,4 +7,4 @@ import App from '@/app.riot';
 const mountApp = component(App);
 const app = document.getElementById('app');
 
-if (app) mountApp(app, { message: 'Hello World!' });
+if (app) mountApp(app, { greeting: 'Hello World!' });
