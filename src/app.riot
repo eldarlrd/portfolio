@@ -1,10 +1,13 @@
 <app>
-  <h1>Hello World!</h1>
+  <my-header />
 
-  <style>
-    h1 {
-      color: white;
-      background: purple;
-    }
-  </style>
+  <script>
+    import myHeader from '@/features/banners/header.riot';
+
+    export default {
+      components: {
+        myHeader
+      }
+    };
+  </script>
 </app>
