@@ -26,7 +26,7 @@ pnpm build
 ```sh
 pnpm preview
 ```
-### Format Code (ESLint + Stylelint + Prettier)
+### Format Code (ESLint + Prettier)
 ```sh
 pnpm format
 ```
