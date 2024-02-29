@@ -7,3 +7,8 @@ const mountApp = component(App);
 const app = document.getElementById('app');
 
 if (app) mountApp(app);
+
+// Easter Egg
+console.log(
+  'Some believe the fate of our worlds is inflexible. My employers disagree.'
+);
