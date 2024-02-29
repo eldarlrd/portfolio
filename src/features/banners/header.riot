@@ -1,5 +1,5 @@
 <my-header>
-  <h1>Hello World!</h1>
+  <h1>{state.PERSONAL_DETAILS.name}</h1>
 
   <style>
     h1 {
@@ -8,4 +8,17 @@
       background: purple;
     }
   </style>
+
+  <script>
+    const PERSONAL_DETAILS = {
+      name: 'Eldar Pashazade',
+      title: 'Jr. Front End Developer'
+    };
+
+    export default {
+      state: {
+        PERSONAL_DETAILS
+      }
+    };
+  </script>
 </my-header>
