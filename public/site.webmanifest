@@ -13,9 +13,9 @@
   "start_url": "https://eldarlrd.github.io/portfolio/",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "https://avatars.githubusercontent.com/u/95304986",
       "type": "image/png",
-      "sizes": "512x512",
+      "sizes": "460x460",
       "purpose": "any"
     }
   ]
