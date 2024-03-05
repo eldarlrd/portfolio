@@ -1,12 +1,28 @@
 <my-header>
+  <img alt="GitHub Avatar" src="{state.PERSONAL_DETAILS.photo}" />
   <h1>{state.PERSONAL_DETAILS.name}</h1>
   <h2>{state.PERSONAL_DETAILS.title}</h2>
-  <img alt="GitHub Avatar" src="{state.PERSONAL_DETAILS.photo}" />
 
   <style>
+    :host {
+      display: block;
+      overflow: clip;
+      text-align: center;
+      padding: 2em 1em;
+      max-width: 100%;
+    }
+
+    img {
+      border-radius: 0.5em;
+      min-width: 16em;
+      max-width: 24em;
+      width: 16em;
+    }
+
     h1,
     h2 {
-      margin: 0;
+      word-wrap: break-word;
+      margin: 0.5em;
     }
   </style>
 
