@@ -8,8 +8,28 @@
       src: url('GeistVF.woff2') format('woff2');
     }
 
+    :root {
+      scroll-behavior: smooth;
+    }
+
     :host {
-      font-family: Geist, sans-serif;
+      --main-fg: #020617; /* tw-stone-950 */
+      --main-bg: #f8fafc; /* tw-stone-50 */
+      --main-accent: #1e293b; /* tw-stone-800 */
+      --main-shadow: 0 0 0.125rem 0 var(--main-fg);
+      --main-font: Geist, sans-serif;
+
+      color: var(--main-fg);
+      background: var(--main-bg);
+      accent-color: var(--main-accent);
+      font-family: var(--main-font);
+      max-width: 100%;
+      overflow: clip;
+    }
+
+    ::selection {
+      color: var(--main-bg);
+      background: var(--main-fg);
     }
   </style>
 
