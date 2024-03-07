@@ -2,28 +2,21 @@
   <my-header />
 
   <style>
-    @font-face {
-      font-family: Geist;
-      font-display: swap;
-      src: url('GeistVF.woff2') format('woff2');
-    }
-
     :root {
       scroll-behavior: smooth;
     }
 
     :host {
-      --main-fg: #020617; /* tw-stone-950 */
-      --main-bg: #f8fafc; /* tw-stone-50 */
-      --main-accent: #1e293b; /* tw-stone-800 */
+      --main-fg: #0f172a; /* tw-slate-900 */
+      --main-bg: #f1f5f9; /* tw-slate-100 */
       --main-shadow: 0 0 0.125rem 0 var(--main-fg);
-      --main-font: Geist, sans-serif;
+      --main-font: 'Geist Sans', sans-serif;
+      --main-radius: 0.5rem;
 
       color: var(--main-fg);
       background: var(--main-bg);
-      accent-color: var(--main-accent);
+      accent-color: var(--main-fg);
       font-family: var(--main-font);
-      max-width: 100%;
       overflow: clip;
     }
 
