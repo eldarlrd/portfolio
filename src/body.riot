@@ -1,5 +1,6 @@
-<app>
-  <my-header />
+<body>
+  <navbar />
+  <hero />
 
   <style>
     :root {
@@ -27,12 +28,14 @@
   </style>
 
   <script>
-    import MyHeader from '@/features/banners/header.riot';
+    import Navbar from '@/features/content/navbar.riot';
+    import Hero from '@/features/banners/hero.riot';
 
     export default {
       components: {
-        MyHeader
+        Navbar,
+        Hero
       }
     };
   </script>
-</app>
+</body>
