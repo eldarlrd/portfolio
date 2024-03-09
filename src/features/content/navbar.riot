@@ -1,7 +1,71 @@
 <navbar>
-  navbar
+  <nav>
+    <a
+      each="{ item in state.LINK_ITEMS }"
+      type="text/html"
+      title="{item.title}"
+      href="#{item.href}">
+      <i class="fa-solid fa-fw fa-{item.icon}"></i>
+    </a>
+  </nav>
 
-  <style></style>
+  <style>
+    :host {
+      position: fixed;
+      width: 100%;
+    }
 
-  <script></script>
+    nav {
+      max-width: fit-content;
+      font-size: 1.125rem;
+      margin: 1rem auto;
+      user-select: none;
+      padding: 0.5rem 0.625rem;
+      background: var(--main-fg);
+      box-shadow: var(--main-shadow);
+      border-radius: var(--main-radius);
+    }
+
+    a {
+      margin: 0 0.625rem;
+      color: var(--main-bg);
+    }
+
+    i {
+      width: 1rem;
+      max-height: 1rem;
+      padding: 0.625rem 0.5rem;
+    }
+  </style>
+
+  <script>
+    const LINK_ITEMS = [
+      {
+        href: 'hero',
+        icon: 'user',
+        title: 'Hero'
+      },
+      {
+        href: 'skill-grid',
+        icon: 'screwdriver-wrench',
+        title: 'Skills'
+      },
+      {
+        href: 'project-list',
+        icon: 'toolbox',
+        title: 'Projects'
+      },
+      {
+        href: 'contact',
+        icon: 'paper-plane',
+        title: 'Contact'
+      }
+    ];
+
+    export default {
+      state: {
+        LINK_ITEMS
+      }
+    };
+  </script>
 </navbar>
