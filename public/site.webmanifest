@@ -6,6 +6,7 @@
   "categories": [
     "personalization"
   ],
+  "display": "minimal-ui",
   "orientation": "natural",
   "theme_color": "#fff",
   "background_color": "#fff",
@@ -15,8 +16,8 @@
     {
       "src": "https://github.com/eldarlrd.png",
       "type": "image/png",
-      "sizes": "460x460",
-      "purpose": "any"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ]
 }

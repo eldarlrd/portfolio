@@ -1,5 +1,5 @@
 <navbar>
-  <nav>
+  <nav class="{ state.isHidden && 'hidden' }">
     <a
       each="{ item in state.LINK_ITEMS }"
       type="text/html"
@@ -24,11 +24,39 @@
       background: var(--main-fg);
       box-shadow: var(--main-shadow);
       border-radius: var(--main-radius);
+      transition: transform var(--main-transition);
+    }
+
+    .hidden {
+      transform: translateY(-5rem);
     }
 
     a {
       margin: 0 0.625rem;
+      position: relative;
       color: var(--main-bg);
+      border-radius: var(--main-radius);
+      -webkit-tap-highlight-color: var(--main-highlight);
+    }
+
+    a::before {
+      position: absolute;
+      display: block;
+      content: '';
+      left: 0;
+      bottom: -0.25rem;
+      width: 100%;
+      height: 0.125rem;
+      transform: scaleX(0);
+      background: var(--main-bg);
+      border-radius: var(--main-radius);
+      transition: transform var(--main-transition);
+    }
+
+    @media (hover: hover) {
+      a:hover::before {
+        transform: scaleX(1);
+      }
     }
 
     i {
@@ -64,7 +92,27 @@
 
     export default {
       state: {
-        LINK_ITEMS
+        LINK_ITEMS,
+        isHidden: false,
+        prevScrollPos: 0
+      },
+
+      onMounted() {
+        this.handleScroll = this.handleScroll.bind(this);
+        window.addEventListener('scroll', this.handleScroll);
+      },
+
+      onBeforeUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+      },
+
+      handleScroll() {
+        const currScrollPos = window.scrollY || window.pageYOffset;
+        this.update({
+          isHidden:
+            currScrollPos > this.state.prevScrollPos && currScrollPos > 80,
+          prevScrollPos: currScrollPos
+        });
       }
     };
   </script>

@@ -4,8 +4,10 @@
 
   <style>
     :host {
-      --main-fg: #1e293b; /* tw-slate-800 */
       --main-bg: #f1f5f9; /* tw-slate-100 */
+      --main-fg: #1e293b; /* tw-slate-800 */
+      --main-highlight: #1e293b80;
+      --main-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
       --main-shadow: 0 0 0.125rem 0 var(--main-fg);
       --main-font: 'Geist Sans', sans-serif;
       --main-radius: 0.5rem;
@@ -15,7 +17,6 @@
       accent-color: var(--main-fg);
       font-family: var(--main-font);
       overflow: clip;
-      height: 200vh;
     }
 
     ::selection {
