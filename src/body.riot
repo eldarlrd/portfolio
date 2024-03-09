@@ -1,12 +1,13 @@
 <body>
   <navbar />
   <hero />
+  <skill-grid />
 
   <style>
     :host {
       --main-bg: #f1f5f9; /* tw-slate-100 */
       --main-fg: #1e293b; /* tw-slate-800 */
-      --main-highlight: #1e293b80;
+      --main-tap: #1e293b80;
       --main-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
       --main-shadow: 0 0 0.125rem 0 var(--main-fg);
       --main-font: 'Geist Sans', sans-serif;
@@ -28,11 +29,13 @@
   <script>
     import Navbar from '@/features/content/navbar.riot';
     import Hero from '@/features/banners/hero.riot';
+    import SkillGrid from '@/features/content/skillGrid.riot';
 
     export default {
       components: {
         Navbar,
-        Hero
+        Hero,
+        SkillGrid
       }
     };
   </script>
