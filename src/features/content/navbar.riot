@@ -3,8 +3,8 @@
     <a
       each="{ item in state.LINK_ITEMS }"
       type="text/html"
-      title="{item.title}"
-      href="#{item.href}">
+      title="{item.name}"
+      href="#{item.name.toLowerCase()}">
       <i class="fa-solid fa-fw fa-{item.icon}"></i>
     </a>
   </nav>
@@ -72,24 +72,20 @@
   <script>
     const LINK_ITEMS = [
       {
-        href: 'hero',
-        icon: 'user',
-        title: 'Hero'
+        name: 'Hero',
+        icon: 'user'
       },
       {
-        href: 'skill-grid',
-        icon: 'screwdriver-wrench',
-        title: 'Skills'
+        name: 'Skills',
+        icon: 'screwdriver-wrench'
       },
       {
-        href: 'project-list',
-        icon: 'toolbox',
-        title: 'Projects'
+        name: 'Projects',
+        icon: 'toolbox'
       },
       {
-        href: 'contact',
-        icon: 'paper-plane',
-        title: 'Contact'
+        name: 'Contact',
+        icon: 'paper-plane'
       }
     ];
 
