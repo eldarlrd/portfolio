@@ -5,7 +5,7 @@
   </h1>
 
   <main>
-    <project-card each="{ project in state.PROJECTS }" project="{project}" />
+    <project-item each="{ project in state.PROJECTS }" project="{project}" />
   </main>
 
   <style>
@@ -26,20 +26,61 @@
 
     main {
       width: 100%;
-      gap: 2rem 1rem;
-      max-width: 60rem;
+      display: grid;
       margin: 0 auto;
+      gap: 2rem 1rem;
+      max-width: 75rem;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
   </style>
 
   <script>
-    import ProjectCard from '@/components/projectCard.riot';
+    import ProjectItem from '@/components/projectItem.riot';
 
-    const PROJECTS = [{}];
+    const PROJECTS = [
+      {
+        name: 'JS Algorithms',
+        link: 'js-algorithms',
+        description: '',
+        banner: '544421143/4ca0ab73-d2d6-42bd-ac29-1ab9b2176d05'
+      },
+      {
+        name: 'Todo List',
+        link: 'todo-list',
+        description: '',
+        banner: '672655216/30fcc02d-0fde-4b0c-83a3-f951d23e679f'
+      },
+      {
+        name: 'TS Battleship',
+        link: 'ts-battleship',
+        description: '',
+        banner: '728235696/64c12b80-542b-4439-9b84-7366203702ec'
+      },
+      {
+        name: 'Fifteen Puzzle',
+        link: 'fifteen-puzzle',
+        description: '',
+        banner: '641330748/537026e9-d167-43d6-9b9a-5879e88a6c2e'
+      },
+      {
+        name: 'Weather App',
+        link: 'weather-app',
+        description: '',
+        banner: '719001057/dc280644-fb4f-42a9-a2c7-5af7ad160ab6'
+      },
+      {
+        name: 'Weather App',
+        link: 'weather-app',
+        description: '',
+        banner: '719001057/dc280644-fb4f-42a9-a2c7-5af7ad160ab6'
+      }
+    ];
 
     export default {
       components: {
-        ProjectCard
+        ProjectItem
       },
 
       state: {

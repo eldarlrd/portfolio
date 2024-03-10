@@ -1,0 +1,29 @@
+<project-item>
+  <img
+    alt="{props.project.name}"
+    src="https://repository-images.githubusercontent.com/{props.project.banner}" />
+  <h2>{props.project.name}</h2>
+  <p>{props.project.description}</p>
+  <a href="https://eldarlrd.github.io/{props.project.link}">.</a>
+  <a href="https://github.com/eldarlrd/{props.project.link}">.</a>
+
+  <style>
+    :host {
+      margin: 0 auto 0.875rem auto;
+    }
+
+    img {
+      border-radius: var(--main-radius);
+      box-shadow: var(--main-shadow);
+      max-width: 90svw;
+      width: 24rem;
+    }
+
+    h2 {
+      word-wrap: break-word;
+      user-select: none;
+      font-weight: 500;
+      line-height: 1;
+    }
+  </style>
+</project-item>
