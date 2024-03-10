@@ -2,6 +2,7 @@
   <navbar />
   <hero />
   <skills />
+  <projects />
 
   <style>
     :host {
@@ -17,6 +18,7 @@
       background: var(--main-bg);
       accent-color: var(--main-fg);
       font-family: var(--main-font);
+      min-height: 100%;
       overflow: clip;
     }
 
@@ -30,12 +32,14 @@
     import Navbar from '@/features/content/navbar.riot';
     import Hero from '@/features/banners/hero.riot';
     import Skills from '@/features/content/skills.riot';
+    import Projects from '@/features/content/projects.riot';
 
     export default {
       components: {
         Navbar,
         Hero,
-        Skills
+        Skills,
+        Projects
       }
     };
   </script>

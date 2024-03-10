@@ -1,0 +1,19 @@
+<projects id="projects">
+  <project-card each="{ project in state.PROJECTS }" project="{project}" />
+
+  <script>
+    import ProjectCard from '@/components/projectCard.riot';
+
+    const PROJECTS = [{}];
+
+    export default {
+      components: {
+        ProjectCard
+      },
+
+      state: {
+        PROJECTS
+      }
+    };
+  </script>
+</projects>

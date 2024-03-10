@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "0.2.2",
+  "version": "0.3.0",
   "type": "module",
   "keywords": [
     "portfolio"
@@ -16,7 +16,7 @@
     "preview": "vite preview",
     "deployer": "pnpm build && gh-pages -b prod -m 'build(prod): deployment' -d dist",
     "lint": "eslint src --ext .ts,.tsx --report-unused-disable-directives",
-    "pretty": "prettier '{src,__{tests,mocks,snapshots}__}/**/*.{ts,tsx,riot}' --write",
+    "pretty": "prettier 'src/**/*.{ts,tsx,riot}' --write",
     "format": "pnpm lint --fix && pnpm pretty"
   },
   "prettier": {
