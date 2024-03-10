@@ -1,7 +1,7 @@
 # Portfolio | eldarlrd
 [![Version](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/eldarlrd/portfolio/main/package.json&query=version&logo=git-extensions&label=version&labelColor=475569&color=0284c7)](https://github.com/eldarlrd/portfolio/blob/main/package.json)
 
-> Portfolio | eldarlrd is a website built with
+> Portfolio | eldarlrd is built using
 > - **[TypeScript](https://typescriptlang.org)**
 > - **[Normalize](https://necolas.github.io/normalize.css)**
 > - **[Fontsource](https://fontsource.org)**
@@ -10,7 +10,7 @@
 > - **[Riot](https://riot.js.org)**
 > - **[Vite](https://vitejs.dev)**
 >
-> to represent skill sets and abilities.
+> to represent skill sets and projects.
 
 ## Install
 ```sh
