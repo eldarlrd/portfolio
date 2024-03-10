@@ -1,11 +1,11 @@
 <navbar>
   <nav class="{ state.isHidden && 'hidden' }">
     <a
-      each="{ item in state.LINK_ITEMS }"
+      each="{ link in state.LINKS }"
       type="text/html"
-      title="{item.name}"
-      href="#{item.name.toLowerCase()}">
-      <i class="fa-solid fa-fw fa-{item.icon}"></i>
+      title="{link.name}"
+      href="#{link.name.toLowerCase()}">
+      <i class="fa-solid fa-fw fa-{link.icon}"></i>
     </a>
   </nav>
 
@@ -70,7 +70,7 @@
   </style>
 
   <script>
-    const LINK_ITEMS = [
+    const LINKS = [
       {
         name: 'Hero',
         icon: 'user'
@@ -91,11 +91,12 @@
 
     export default {
       state: {
-        LINK_ITEMS,
+        LINKS,
         isHidden: false,
         prevScrollPos: 0
       },
 
+      // Hide on Scroll
       onMounted() {
         this.handleScroll = this.handleScroll.bind(this);
         window.addEventListener('scroll', this.handleScroll);

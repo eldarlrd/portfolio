@@ -1,10 +1,132 @@
-<skills>
+<skills id="skills">
+  <h1>
+    <i class="fa-solid fa-fw fa-screwdriver-wrench"></i>
+    Skills
+  </h1>
+
+  <section>
+    <skill-item each="{ skill in state.SKILLS }" skill="{skill}" />
+  </section>
+
+  <style>
+    :host {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+    }
+
+    h1 {
+      word-wrap: break-word;
+      user-select: none;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    section {
+      width: 100%;
+      display: grid;
+      gap: 2rem 1rem;
+      max-width: 60rem;
+      margin: 1.5rem auto;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+  </style>
+
   <script>
     import SkillItem from '@/components/skillItem.riot';
+
+    const SKILLS = [
+      {
+        name: 'HTML',
+        icon: 'html5-plain'
+      },
+      {
+        name: 'CSS',
+        icon: 'css3-plain'
+      },
+      {
+        name: 'JavaScript',
+        icon: 'javascript-plain'
+      },
+      {
+        name: 'TypeScript',
+        icon: 'typescript-plain'
+      },
+      {
+        name: 'CoffeeScript',
+        icon: 'coffeescript-original'
+      },
+      {
+        name: 'jQuery',
+        icon: 'jquery-plain'
+      },
+      {
+        name: 'React',
+        icon: 'react-original'
+      },
+      {
+        name: 'Redux',
+        icon: 'redux-original'
+      },
+      {
+        name: 'Solid',
+        icon: 'solidjs-plain'
+      },
+      {
+        name: 'Mithril',
+        icon: 'mithril-original'
+      },
+      {
+        name: 'SCSS',
+        icon: 'sass-original'
+      },
+      {
+        name: 'PostCSS',
+        icon: 'postcss-original'
+      },
+      {
+        name: 'Stylus',
+        icon: 'stylus-original'
+      },
+      {
+        name: 'Tailwind',
+        icon: 'tailwindcss-original'
+      },
+      {
+        name: 'Bootstrap',
+        icon: 'bootstrap-plain'
+      },
+      {
+        name: 'Node',
+        icon: 'nodejs-plain'
+      },
+      {
+        name: 'Jest',
+        icon: 'jest-plain'
+      },
+      {
+        name: 'ESLint',
+        icon: 'eslint-plain'
+      },
+      {
+        name: 'Vite',
+        icon: 'vitejs-plain'
+      },
+      {
+        name: 'webpack',
+        icon: 'webpack-plain'
+      }
+    ];
 
     export default {
       components: {
         SkillItem
+      },
+
+      state: {
+        SKILLS
       }
     };
   </script>

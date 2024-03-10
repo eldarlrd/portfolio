@@ -1,1 +1,23 @@
-<skill-item></skill-item>
+<skill-item>
+  <i class="devicon-{props.skill.icon} colored"></i>
+  <h3>{props.skill.name}</h3>
+
+  <style>
+    :host {
+      min-width: 100%;
+      text-align: center;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+
+    h3 {
+      word-wrap: break-word;
+      margin: 0.875rem auto;
+      user-select: none;
+      font-weight: 500;
+      line-height: 1;
+    }
+  </style>
+</skill-item>

@@ -4,6 +4,9 @@
 > Portfolio | eldarlrd is a website built with
 > - **[TypeScript](https://typescriptlang.org)**
 > - **[Normalize](https://necolas.github.io/normalize.css)**
+> - **[Fontsource](https://fontsource.org)**
+> - **[Font Awesome](https://fontawesome.com)**
+> - **[Devicon](https://devicon.dev)**
 > - **[Riot](https://riot.js.org)**
 > - **[Vite](https://vitejs.dev)**
 >
