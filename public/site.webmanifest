@@ -8,8 +8,8 @@
   ],
   "display": "minimal-ui",
   "orientation": "natural",
-  "theme_color": "#fff",
-  "background_color": "#fff",
+  "theme_color": "#1e293b",
+  "background_color": "#f1f5f9",
   "description": "eldarlrd's portfolio",
   "start_url": "https://eldarlrd.github.io/portfolio/",
   "icons": [
