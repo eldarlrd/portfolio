@@ -13,6 +13,7 @@
     :host {
       position: fixed;
       width: 100%;
+      z-index: 1;
     }
 
     nav {
@@ -108,11 +109,21 @@
 
       handleScroll() {
         const currScrollPos = window.scrollY || window.pageYOffset;
+        const threshold = 80;
+        const delay = 150;
+
         this.update({
           isHidden:
-            currScrollPos > this.state.prevScrollPos && currScrollPos > 80,
-          prevScrollPos: currScrollPos
+            currScrollPos > this.state.prevScrollPos &&
+            currScrollPos > threshold
         });
+
+        // Prevent Scroll Dither
+        setTimeout(() => {
+          this.update({
+            prevScrollPos: currScrollPos
+          });
+        }, delay);
       }
     };
   </script>
