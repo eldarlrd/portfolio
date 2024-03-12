@@ -3,6 +3,7 @@
   <hero />
   <skills />
   <projects />
+  <contact />
 
   <style>
     :host {
@@ -26,6 +27,21 @@
       color: var(--main-bg);
       background: var(--main-fg);
     }
+
+    .content {
+      display: block;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .content > h1 {
+      margin: 0 auto;
+      padding: 3.75rem;
+      word-wrap: break-word;
+      user-select: none;
+      font-weight: 600;
+      line-height: 1;
+    }
   </style>
 
   <script>
@@ -33,13 +49,15 @@
     import Hero from '@/features/banners/hero.riot';
     import Skills from '@/features/content/skills.riot';
     import Projects from '@/features/content/projects.riot';
+    import Contact from '@/features/banners/contact.riot';
 
     export default {
       components: {
         Navbar,
         Hero,
         Skills,
-        Projects
+        Projects,
+        Contact
       }
     };
   </script>
