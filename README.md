@@ -6,6 +6,7 @@
 > - **[Normalize](https://necolas.github.io/normalize.css)**
 > - **[Fontsource](https://fontsource.org)**
 > - **[Font Awesome](https://fontawesome.com)**
+> - **[Web3Forms](https://web3forms.com)**
 > - **[Devicon](https://devicon.dev)**
 > - **[Riot](https://riot.js.org)**
 > - **[Vite](https://vitejs.dev)**

@@ -4,5 +4,149 @@
     Contact
   </h1>
 
-  <style></style>
+  <form onsubmit="{handleSubmit}">
+    <input type="checkbox" name="botcheck" />
+
+    <div>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        minlength="1"
+        maxlength="128"
+        title=""
+        required />
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        minlength="1"
+        maxlength="128"
+        title=""
+        required />
+    </div>
+
+    <div>
+      <label for="message">Message</label>
+      <textarea
+        name="message"
+        id="message"
+        rows="10"
+        minlength="1"
+        maxlength="4000"
+        title=""
+        required></textarea>
+    </div>
+
+    <button type="submit">Send</button>
+    <!-- <p>{state.result}</p> -->
+  </form>
+
+  <style>
+    input[name='botcheck'] {
+      display: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    label {
+      margin-bottom: 0.75rem;
+      text-align: start;
+      user-select: none;
+      word-wrap: break-word;
+      font-weight: 500;
+      line-height: 1;
+      display: block;
+    }
+
+    div > input, textarea {
+      border: 0;
+      caret-color: var(--main-fg);
+      box-shadow: var(--main-shadow);
+      border-radius: var(--main-radius);
+      background: var(--main-field);
+      transition: box-shadow var(--main-transition);
+      padding: 0.375rem 0.5rem;
+    }
+
+    @media (hover: hover) {
+      div > input, textarea {
+        
+      }
+    }
+    
+    textarea {
+      resize: vertical;
+    }
+  </style>
+
+  <script>
+    const OPTIONS = {
+      access_key: import.meta.env.VITE_ACCESS_KEY,
+      from_name: 'Portfolio | eldarlrd',
+      subject: 'New Submission'
+    }
+
+    export default {
+      state: {
+        result: ''
+      },
+
+      handleSubmit(e) {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        const formObj = {
+          ...Object.fromEntries(formData),
+          ...OPTIONS
+        }
+
+        this.update({
+          result: 'Wait...'
+        })
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify(formObj)
+        })
+        .then(async response => {
+          const json = await response.json();
+          if (response.status === 200) {
+            this.update({
+              result: json.message
+            })
+          }
+        })
+        .catch(error => {
+          this.update({
+            result: 'ERROR!'
+          })
+        })
+        .then(() => {
+          e.target.reset();
+          setTimeout(() => {
+          this.update({
+            result: ''
+          });
+        }, 5000);
+        })
+      }
+    }
+  </script>
 </contact>
