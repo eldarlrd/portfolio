@@ -57,37 +57,50 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     label {
-      margin-bottom: 0.75rem;
+      padding-bottom: 0.75rem;
+      word-wrap: break-word;
+      font-size: 1.17rem;
       text-align: start;
       user-select: none;
-      word-wrap: break-word;
-      font-weight: 500;
       line-height: 1;
       display: block;
     }
 
-    div > input, textarea {
+    input,
+    textarea {
       border: 0;
-      caret-color: var(--main-fg);
+      min-height: 1.5rem;
+      caret-color: inherit;
+      padding: 0.375rem 0.5rem;
+      outline: var(--main-outline);
+      background: var(--main-field);
       box-shadow: var(--main-shadow);
       border-radius: var(--main-radius);
-      background: var(--main-field);
-      transition: box-shadow var(--main-transition);
-      padding: 0.375rem 0.5rem;
+      transition: outline-color var(--main-transition);
     }
 
     @media (hover: hover) {
-      div > input, textarea {
-        
+      input:hover,
+      textarea:hover {
+        outline-color: var(--main-hover);
       }
     }
-    
+
+    input:focus,
+    textarea:focus {
+      outline-color: inherit;
+    }
+
     textarea {
       resize: vertical;
+    }
+
+    button {
+      cursor: pointer;
     }
   </style>
 
