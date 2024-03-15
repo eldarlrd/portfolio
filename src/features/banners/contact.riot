@@ -4,7 +4,7 @@
     Contact
   </h1>
 
-  <form onsubmit="{handleSubmit}">
+  <form onsubmit="{state.isValid && handleSubmit}" novalidate>
     <input type="checkbox" name="botcheck" />
 
     <div>
@@ -39,14 +39,15 @@
         rows="10"
         minlength="1"
         maxlength="4000"
+        spellcheck="false"
         title=""
         required></textarea>
     </div>
 
     <span>
-      <button type="submit">Send</button>
+      <button type="submit" disabled="{!state.isValid}">Send</button>
+      <i class="fa-solid fa-{state.result} fa-fw"></i>
     </span>
-    <!-- <p>{state.result}</p> -->
   </form>
 
   <style>
@@ -80,23 +81,25 @@
       min-height: 1.5rem;
       caret-color: inherit;
       padding: 0.375rem 0.5rem;
-      outline: var(--main-outline);
-      background: var(--main-field);
-      box-shadow: var(--main-shadow);
-      border-radius: var(--main-radius);
-      transition: outline-color var(--main-transition);
+      outline: var(--outline);
+      background: var(--field);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      transition: outline-color var(--transition);
     }
 
     @media (hover: hover) {
       input:hover,
-      textarea:hover {
-        outline-color: var(--main-hover);
+      textarea:hover,
+      button:hover {
+        outline-color: var(--hover);
       }
     }
 
     input:focus,
-    textarea:focus {
-      outline-color: inherit;
+    textarea:focus,
+    button:focus {
+      outline-color: var(--fg);
     }
 
     textarea {
@@ -110,6 +113,13 @@
       max-width: calc(80svw + 1rem);
     }
 
+    span > i {
+      user-select: none;
+      font-size: 1.625rem;
+      margin-left: 0.875rem;
+      vertical-align: middle;
+    }
+
     button {
       border: 0;
       width: 10rem;
@@ -117,8 +127,30 @@
       max-width: 100%;
       cursor: pointer;
       padding: 0.75rem;
-      box-shadow: var(--main-shadow);
-      border-radius: var(--main-radius);
+      font-weight: 500;
+      color: var(--bg);
+      background: var(--fg);
+      outline: var(--outline);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      transition:
+        color var(--transition),
+        background var(--transition),
+        outline-color var(--transition);
+    }
+
+    button:disabled {
+      color: inherit;
+      cursor: not-allowed;
+      background: var(--field);
+    }
+
+    .fa-check {
+      color: var(--success);
+    }
+
+    .fa-xmark {
+      color: var(--error);
     }
   </style>
 
@@ -131,22 +163,32 @@
 
     export default {
       state: {
-        result: ''
+        result: '',
+        isValid: false
+      },
+
+      onMounted() {
+        const form = this.$('form');
+        form.addEventListener('input', () => {
+          this.update({
+            isValid: form.checkValidity()
+          });
+        });
       },
 
       handleSubmit(e) {
         e.preventDefault();
 
         const formData = new FormData(e.target);
-
         const formObj = {
           ...Object.fromEntries(formData),
           ...OPTIONS
-        }
+        };
 
         this.update({
-          result: 'Wait...'
-        })
+          result: 'spinner',
+          isValid: false
+        });
 
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
@@ -156,28 +198,28 @@
           },
           body: JSON.stringify(formObj)
         })
-        .then(async response => {
-          const json = await response.json();
-          if (response.status === 200) {
-            this.update({
-              result: json.message
-            })
-          }
-        })
-        .catch(error => {
-          this.update({
-            result: 'ERROR!'
+          .then(async response => {
+            const json = await response.json();
+            if (response.status === 200) {
+              this.update({
+                result: 'check'
+              });
+            }
           })
-        })
-        .then(() => {
-          e.target.reset();
-          setTimeout(() => {
-          this.update({
-            result: ''
+          .catch(error => {
+            this.update({
+              result: 'xmark'
+            });
+          })
+          .then(() => {
+            e.target.reset();
+            setTimeout(() => {
+              this.update({
+                result: ''
+              });
+            }, 5000);
           });
-        }, 5000);
-        })
       }
-    }
+    };
   </script>
 </contact>
