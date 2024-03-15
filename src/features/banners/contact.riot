@@ -43,7 +43,9 @@
         required></textarea>
     </div>
 
-    <button type="submit">Send</button>
+    <span>
+      <button type="submit">Send</button>
+    </span>
     <!-- <p>{state.result}</p> -->
   </form>
 
@@ -102,9 +104,20 @@
       overflow: clip;
     }
 
+    span {
+      width: 25rem;
+      text-align: start;
+      max-width: calc(80svw + 1rem);
+    }
+
     button {
       border: 0;
+      width: 10rem;
+      line-height: 1;
+      max-width: 100%;
       cursor: pointer;
+      padding: 0.75rem;
+      box-shadow: var(--main-shadow);
       border-radius: var(--main-radius);
     }
   </style>
