@@ -97,9 +97,8 @@
     }
 
     input:focus,
-    textarea:focus,
-    button:focus {
-      outline-color: var(--fg);
+    textarea:focus {
+      outline-color: inherit;
     }
 
     textarea {
@@ -133,6 +132,7 @@
       outline: var(--outline);
       box-shadow: var(--shadow);
       border-radius: var(--radius);
+      -webkit-tap-highlight-color: var(--tap-bg);
       transition:
         color var(--transition),
         background var(--transition),
@@ -143,6 +143,10 @@
       color: inherit;
       cursor: not-allowed;
       background: var(--field);
+    }
+
+    button:focus {
+      outline-color: var(--tap-fg);
     }
 
     .fa-check {
