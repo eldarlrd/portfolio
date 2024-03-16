@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "0.8.3",
+  "version": "1.0.0",
   "type": "module",
   "keywords": [
     "portfolio"
@@ -15,8 +15,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "deployer": "pnpm build && gh-pages -b prod -m 'build(prod): deployment' -d dist",
-    "lint": "eslint src --ext .ts,.tsx --report-unused-disable-directives",
-    "pretty": "prettier 'src/**/*.{ts,tsx,riot}' --write",
+    "lint": "eslint src --ext .ts --report-unused-disable-directives",
+    "pretty": "prettier 'src/**/*.{ts,riot}' --write",
     "format": "pnpm lint --fix && pnpm pretty"
   },
   "prettier": {
