@@ -17,17 +17,17 @@
       --tap-fg: #1e293b80;
       --tap-bg: #f1f5f980;
 
-      --transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --radius: 0.5rem;
+      --font: 'Geist Sans', sans-serif;
       --shadow: 0 0 0.125rem 0 var(--tap-fg);
       --outline: 0.0625rem solid transparent;
-      --font: 'Geist Sans', sans-serif;
-      --radius: 0.5rem;
+      --transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
+      min-height: 100%;
       color: var(--fg);
       background: var(--bg);
       accent-color: var(--fg);
       font-family: var(--font);
-      min-height: 100%;
     }
 
     ::selection {
@@ -43,36 +43,45 @@
 
     .content > h1 {
       margin: 0 auto;
-      padding: 3.75rem;
-      word-wrap: break-word;
-      user-select: none;
-      font-weight: 600;
       line-height: 1;
+      font-weight: 600;
+      padding: 3.75rem;
+      user-select: none;
+      word-wrap: break-word;
+    }
+
+    .grid-container {
+      width: 100%;
+      display: grid;
+      margin: 0 auto;
+      gap: 2rem 1rem;
+      align-items: center;
+      justify-content: center;
     }
 
     .external {
-      word-wrap: break-word;
-      text-decoration: none;
-      user-select: none;
       line-height: 1;
       color: inherit;
       position: relative;
+      user-select: none;
+      word-wrap: break-word;
+      text-decoration: none;
       border-radius: var(--radius);
       -webkit-tap-highlight-color: var(--tap-bg);
     }
 
     .external::before {
-      position: absolute;
-      display: block;
-      content: '';
       left: 0;
       width: 100%;
+      content: '';
+      display: block;
       height: 0.125rem;
       bottom: -0.375rem;
+      position: absolute;
       transform: scaleX(0);
-      transform-origin: bottom right;
       background: var(--fg);
       border-radius: var(--radius);
+      transform-origin: bottom right;
       transition: transform var(--transition);
     }
 

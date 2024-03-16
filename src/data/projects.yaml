@@ -1,0 +1,61 @@
+- name: JS Algorithms
+  banner: 544421143/4ca0ab73-d2d6-42bd-ac29-1ab9b2176d05
+  stack:
+  - react-original
+  - javascript-plain
+  - typescript-plain
+  description: A front end interface that comprises a component library,
+    a syntax highlighter, and an intersection observer for a dynamic table
+    of contents to display pure and interactive algorithms.
+
+- name: Todo List
+  banner: 672655216/2dae1b2c-0ad4-4fa6-91e3-908838dc8bce
+  stack:
+  - react-original
+  - redux-original
+  - tailwindcss-original
+  - vitest-plain
+  - typescript-plain
+  description: A complex, project-based todo list that uses Preact, Redux,
+    date-fns, Nano ID for keys, dnd kit for the sidebar vertical drag n' drop,
+    and focus traps for accessibility and keyboard crawl.
+
+- name: TS Battleship
+  banner: 728235696/64c12b80-542b-4439-9b84-7366203702ec
+  stack:
+  - solidjs-plain
+  - vitest-plain
+  - typescript-plain
+  description: A classic board game recreated in a digital format
+    as a Progressive Web App using Solid & Emotion's CSS-in-JS.
+    Game logic has been tested in Vitest with complete coverage.
+
+- name: Fifteen Puzzle
+  banner: 641330748/537026e9-d167-43d6-9b9a-5879e88a6c2e
+  stack:
+  - tailwindcss-original
+  - postcss-original
+  - typescript-plain
+  description: A popular puzzle game now available as an installable
+    PWA with a timer, a move counter, and a highlight for
+    correct placements made with Arrow and Tailwind CSS.
+
+- name: Weather App
+  banner: 719001057/dc280644-fb4f-42a9-a2c7-5af7ad160ab6
+  stack:
+  - html5-plain
+  - css3-plain
+  - typescript-plain
+  description: A regular weather app built with Lit's custom web
+    components and the W3.CSS classes, consuming the OpenWeather API.
+    Uses the Geolocation API to automatically set the user's city.
+
+- name: Etch A Sketch
+  banner: 610183082/b105ebb6-0a80-4a99-8361-f3028757de11
+  stack:
+  - react-original
+  - less-plain-wordmark
+  - typescript-plain
+  description: A common mechanical kids toy for drawing,
+    made digital with a color picker and a dynamic grid size.
+    Developed using Preact and Less as the preprocessor.

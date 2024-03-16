@@ -13,6 +13,9 @@ dependencies:
     version: 9.1.4
 
 devDependencies:
+  '@modyfi/vite-plugin-yaml':
+    specifier: ^1.1.0
+    version: 1.1.0(rollup@4.13.0)(vite@5.1.6)
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.2.0
     version: 7.2.0(@typescript-eslint/parser@7.2.0)(eslint@8.57.0)(typescript@5.4.2)
@@ -352,6 +355,19 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.2:
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
+    dev: true
+
+  /@modyfi/vite-plugin-yaml@1.1.0(rollup@4.13.0)(vite@5.1.6):
+    resolution: {integrity: sha512-L26xfzkSo1yamODCAtk/ipVlL6OEw2bcJ92zunyHu8zxi7+meV0zefA9xscRMDCsMY8xL3C3wi3DhMiPxcbxbw==}
+    peerDependencies:
+      vite: ^3.2.7 || ^4.0.5 || ^5.0.5
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.13.0)
+      js-yaml: 4.1.0
+      tosource: 2.0.0-alpha.3
+      vite: 5.1.6
+    transitivePeerDependencies:
+      - rollup
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -2482,6 +2498,11 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: true
+
+  /tosource@2.0.0-alpha.3:
+    resolution: {integrity: sha512-KAB2lrSS48y91MzFPFuDg4hLbvDiyTjOVgaK7Erw+5AmZXNq4sFRVn8r6yxSLuNs15PaokrDRpS61ERY9uZOug==}
+    engines: {node: '>=10'}
     dev: true
 
   /trim-repeated@1.0.0:

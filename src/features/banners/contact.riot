@@ -34,19 +34,19 @@
     <div>
       <label for="message">Message</label>
       <textarea
-        name="message"
         id="message"
-        rows="10"
+        name="message"
         minlength="1"
         maxlength="4000"
         spellcheck="false"
+        rows="10"
         title=""
         required></textarea>
     </div>
 
     <span>
       <button type="submit" disabled="{!state.isValid}">Send</button>
-      <i class="fa-solid fa-{state.result} fa-fw"></i>
+      <i class="fa-solid fa-fw fa-{state.result}"></i>
     </span>
   </form>
 
@@ -56,21 +56,21 @@
     }
 
     form {
+      gap: 1.5rem;
       display: flex;
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      gap: 1.5rem;
     }
 
     label {
-      padding-bottom: 0.75rem;
-      word-wrap: break-word;
-      font-size: 1.17rem;
-      text-align: start;
-      user-select: none;
-      line-height: 1;
       display: block;
+      line-height: 1;
+      user-select: none;
+      text-align: start;
+      font-size: 1.17rem;
+      word-wrap: break-word;
+      padding-bottom: 0.75rem;
     }
 
     input,
@@ -80,9 +80,9 @@
       max-width: 80svw;
       min-height: 1.5rem;
       caret-color: inherit;
-      padding: 0.375rem 0.5rem;
       outline: var(--outline);
       background: var(--field);
+      padding: 0.375rem 0.5rem;
       box-shadow: var(--shadow);
       border-radius: var(--radius);
       transition: outline-color var(--transition);
@@ -102,8 +102,8 @@
     }
 
     textarea {
-      resize: vertical;
       overflow: clip;
+      resize: vertical;
     }
 
     span {
@@ -160,9 +160,9 @@
 
   <script>
     const OPTIONS = {
-      access_key: import.meta.env.VITE_ACCESS_KEY,
+      subject: 'New Submission',
       from_name: 'Portfolio | eldarlrd',
-      subject: 'New Submission'
+      access_key: import.meta.env.VITE_ACCESS_KEY
     }
 
     export default {
@@ -183,6 +183,7 @@
       handleSubmit(e) {
         e.preventDefault();
 
+        const delay = 5000;
         const formData = new FormData(e.target);
         const formObj = {
           ...Object.fromEntries(formData),
@@ -221,7 +222,7 @@
               this.update({
                 result: ''
               });
-            }, 5000);
+            }, delay);
           });
       }
     };

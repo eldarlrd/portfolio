@@ -11,23 +11,23 @@
 
   <style>
     :host {
-      pointer-events: none;
-      position: fixed;
-      width: 100%;
       z-index: 1;
+      width: 100%;
+      position: fixed;
+      pointer-events: none;
     }
 
     nav {
-      pointer-events: auto;
-      box-sizing: border-box;
-      max-width: fit-content;
-      min-width: 15.875rem;
-      min-height: 3.25rem;
-      font-size: 1.125rem;
       margin: 1rem auto;
       user-select: none;
-      padding: 0.5rem 0.625rem;
+      min-height: 3.25rem;
+      font-size: 1.125rem;
+      min-width: 15.875rem;
+      pointer-events: auto;
       background: var(--fg);
+      box-sizing: border-box;
+      max-width: fit-content;
+      padding: 0.5rem 0.625rem;
       box-shadow: var(--shadow);
       border-radius: var(--radius);
       transition: transform var(--transition);
@@ -38,21 +38,21 @@
     }
 
     a {
-      margin: 0 0.625rem;
-      position: relative;
       color: var(--bg);
+      position: relative;
+      margin: 0 0.625rem;
       border-radius: var(--radius);
       -webkit-tap-highlight-color: var(--tap-fg);
     }
 
     a::before {
-      position: absolute;
-      display: block;
-      content: '';
       left: 0;
+      content: '';
       width: 100%;
+      display: block;
       height: 0.125rem;
       bottom: -0.375rem;
+      position: absolute;
       transform: scaleX(0);
       background: var(--bg);
       border-radius: var(--radius);
