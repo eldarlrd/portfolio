@@ -6,7 +6,5 @@ import ViteYaml from '@modyfi/vite-plugin-yaml';
 export default defineConfig({
   base: '/portfolio/',
   plugins: [riot(), ViteYaml()],
-  resolve: {
-    alias: { '@': '/src' }
-  }
+  resolve: { alias: { '@': '/src' } }
 });

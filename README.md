@@ -3,12 +3,12 @@
 
 > Portfolio | eldarlrd is built using
 > - **[TypeScript](https://typescriptlang.org)**
-> - **[Normalize](https://necolas.github.io/normalize.css)**
-> - **[Fontsource](https://fontsource.org)**
-> - **[Font Awesome](https://fontawesome.com)**
-> - **[Web3Forms](https://web3forms.com)**
-> - **[Devicon](https://devicon.dev)**
 > - **[Riot](https://riot.js.org)**
+> - **[Web3Forms](https://web3forms.com)**
+> - **[modern-normalize](https://github.com/sindresorhus/modern-normalize)**
+> - **[Font Awesome](https://fontawesome.com)**
+> - **[Fontsource](https://fontsource.org)**
+> - **[Devicon](https://devicon.dev)**
 > - **[Vite](https://vitejs.dev)**
 >
 > to represent skill sets and projects.

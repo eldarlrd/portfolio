@@ -1,6 +1,6 @@
 import { component } from 'riot';
+import 'modern-normalize';
 
-import 'normalize.css';
 import Body from '@/body.riot';
 
 const mountBody = component(Body);

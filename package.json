@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "keywords": [
     "portfolio"
@@ -15,7 +15,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "deployer": "pnpm build && gh-pages -b prod -m 'build(prod): deployment' -d dist",
-    "lint": "eslint src --ext .ts --report-unused-disable-directives",
+    "lint": "eslint src --ext ts --report-unused-disable-directives",
     "pretty": "prettier 'src/**/*.{ts,riot}' --write",
     "format": "pnpm lint --fix && pnpm pretty"
   },
@@ -36,13 +36,13 @@
     ]
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
+    "modern-normalize": "^2.0.0",
     "riot": "^9.1.4"
   },
   "devDependencies": {
     "@modyfi/vite-plugin-yaml": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
