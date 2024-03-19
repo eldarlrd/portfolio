@@ -16,8 +16,9 @@
         minlength="1"
         maxlength="128"
         oninput="{handleInput}"
-        title=""
-        required />
+        autocapitalize="on"
+        required
+        title />
     </div>
 
     <div>
@@ -29,8 +30,8 @@
         minlength="1"
         maxlength="128"
         oninput="{handleInput}"
-        title=""
-        required />
+        required
+        title />
     </div>
 
     <div>
@@ -43,8 +44,8 @@
         spellcheck="false"
         oninput="{handleInput}"
         rows="10"
-        title=""
-        required></textarea>
+        required
+        title></textarea>
     </div>
 
     <span>
@@ -102,6 +103,7 @@
 
     input:focus,
     textarea:focus {
+      outline-style: solid;
       outline-color: inherit;
     }
 
@@ -150,6 +152,7 @@
     }
 
     button:focus {
+      outline-style: solid;
       outline-color: var(--tap-fg);
     }
 
