@@ -59,7 +59,8 @@
       justify-content: center;
     }
 
-    .external {
+    .external,
+    .preview {
       line-height: 1;
       color: inherit;
       position: relative;
@@ -85,14 +86,25 @@
       transition: transform var(--transition);
     }
 
+    .preview {
+      display: block;
+      outline: var(--outline);
+      transition: outline-color var(--transition);
+    }
+
     @media (hover: hover) {
       .external:hover::before {
         transform: scaleX(1);
         transform-origin: bottom left;
       }
+
+      .preview:hover {
+        outline-color: var(--hover);
+      }
     }
 
-    a:focus-visible {
+    a:focus-visible,
+    .preview:focus-visible {
       outline-style: solid;
       outline-color: inherit;
     }

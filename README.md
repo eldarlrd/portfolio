@@ -9,7 +9,7 @@
 > - **[Web3Forms](https://web3forms.com)**
 > - **[Devicon](https://devicon.dev)**
 > - **[Riot](https://riot.js.org)**
-> - **[Vite](https://vitejs.dev)**
+> - **[Vite](https://vite.dev)**
 >
 > to represent skill sets and projects.
 

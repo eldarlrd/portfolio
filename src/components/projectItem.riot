@@ -1,8 +1,16 @@
 <project-item>
-  <img
-    loading="lazy"
-    alt="{props.project.name}"
-    src="https://repository-images.githubusercontent.com/{props.project.banner}" />
+  <a
+    class="preview"
+    type="text/html"
+    title="Live Demo"
+    target="_blank"
+    rel="external noreferrer"
+    href="../{props.project.name.toLowerCase().replaceAll(' ', '-')}">
+    <img
+      loading="lazy"
+      alt="{props.project.name}"
+      src="https://repository-images.githubusercontent.com/{props.project.banner}" />
+  </a>
 
   <figcaption>
     <a
@@ -10,7 +18,7 @@
       type="text/html"
       title="Live Demo"
       target="_blank"
-      rel="noopener noreferrer nofollow external"
+      rel="external noreferrer"
       href="../{props.project.name.toLowerCase().replaceAll(' ', '-')}">
       {props.project.name}
     </a>
@@ -19,7 +27,7 @@
       type="text/html"
       title="Source Repo"
       target="_blank"
-      rel="noopener noreferrer nofollow external"
+      rel="external noreferrer"
       href="https://github.com/eldarlrd/{props.project.name.toLowerCase().replaceAll(' ', '-')}">
       <i
         each="{icon in props.project.stack}"
