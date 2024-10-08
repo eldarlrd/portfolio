@@ -5,7 +5,7 @@
     title="Live Demo"
     target="_blank"
     rel="external noreferrer"
-    href="../{props.project.name.toLowerCase().replaceAll(' ', '-')}">
+    href="../{kebabize(props.project.name)}">
     <img
       loading="lazy"
       alt="{props.project.name}"
@@ -19,7 +19,7 @@
       title="Live Demo"
       target="_blank"
       rel="external noreferrer"
-      href="../{props.project.name.toLowerCase().replaceAll(' ', '-')}">
+      href="../{kebabize(props.project.name)}">
       {props.project.name}
     </a>
     <a
@@ -28,7 +28,7 @@
       title="Source Repo"
       target="_blank"
       rel="external noreferrer"
-      href="https://github.com/eldarlrd/{props.project.name.toLowerCase().replaceAll(' ', '-')}">
+      href="https://github.com/eldarlrd/{kebabize(props.project.name)}">
       <i
         each="{icon in props.project.stack}"
         class="devicon-{icon} colored"></i>
@@ -88,4 +88,12 @@
       margin: 1.125rem 0 0 0;
     }
   </style>
+
+  <script>
+    export default {
+      kebabize(str) {
+        return str.toLowerCase().replaceAll(' ', '-');
+      }
+    };
+  </script>
 </project-item>

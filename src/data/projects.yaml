@@ -4,9 +4,9 @@
   - react-original
   - stylus-original
   - typescript-plain
-  description: An online tool which helps simplify the process of building
-    a resume, allowing the input of personal and professional information that
-    generates a downloadable PDF for sharing. Made with React & Zustand.
+  description: An online tool that helps simplify the process of
+    building a resume, allowing the input of relevant information
+    that generates a PDF for download. Made with React & Zustand.
 
 - name: Fifteen Puzzle
   banner: 641330748/537026e9-d167-43d6-9b9a-5879e88a6c2e
