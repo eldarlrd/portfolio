@@ -211,7 +211,7 @@
         Object.assign(formObj, OPTIONS);
 
         this.update({
-          result: 'spinner',
+          result: 'spinner fa-spin-pulse',
           isValid: false
         });
 
@@ -225,11 +225,10 @@
         })
           .then(async response => {
             const json = await response.json();
-            if (response.status === 200) {
+            if (response.status === 200)
               this.update({
                 result: 'check'
-              });
-            }
+              }); else throw response;
           })
           .catch(error => {
             this.update({
