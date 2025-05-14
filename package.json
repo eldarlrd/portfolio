@@ -15,9 +15,10 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "deployer": "pnpm build && gh-pages -b prod -m 'build(prod): deployment' -d dist",
-    "lint": "eslint src --flag unstable_ts_config",
+    "lint": "eslint src",
     "pretty": "prettier 'src/**/*.{ts,riot}' --write",
-    "format": "pnpm lint --fix && pnpm pretty"
+    "format": "pnpm lint --fix && pnpm pretty",
+    "cut": "knip --cache --fix"
   },
   "prettier": {
     "singleQuote": true,
@@ -37,23 +38,25 @@
   },
   "dependencies": {
     "modern-normalize": "^3.0.1",
-    "riot": "^9.4.5"
+    "riot": "^9.4.7"
   },
   "devDependencies": {
-    "@modyfi/vite-plugin-yaml": "^1.1.0",
-    "eslint": "^9.20.1",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-import-resolver-typescript": "^3.8.1",
+    "@modyfi/vite-plugin-yaml": "^1.1.1",
+    "@types/node": "^22.15.18",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-import-resolver-typescript": "^4.3.4",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-n": "^17.18.0",
     "eslint-plugin-no-relative-import-paths": "^1.6.1",
     "eslint-plugin-promise": "^7.2.1",
     "gh-pages": "^6.3.0",
     "jiti": "^2.4.2",
-    "prettier": "^3.5.1",
+    "knip": "^5.55.1",
+    "prettier": "^3.5.3",
     "rollup-plugin-riot": "^9.0.2",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.1",
-    "vite": "^6.1.0"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vite": "^6.3.5"
   }
 }

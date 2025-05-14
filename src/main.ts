@@ -1,9 +1,9 @@
-import { component } from 'riot';
+import { type RiotComponent, component } from 'riot';
 import 'modern-normalize';
 
 import Body from '@/body.riot';
 
-const mountBody = component(Body);
+const mountBody = component(Body as RiotComponent);
 
 mountBody(document.body);
 

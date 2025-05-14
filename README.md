@@ -18,21 +18,25 @@
 pnpm i
 ```
 ## Develop
-### Run Env.
+### Run Env
 ```sh
 pnpm dev
 ```
-### Prod. Build
+### Prod Build
 ```sh
 pnpm build
 ```
-### Preview Prod. Build
+### Preview Prod Build
 ```sh
 pnpm preview
 ```
 ### Format Code (ESLint + Prettier)
 ```sh
 pnpm format
+```
+### Cut Orphans (Knip)
+```sh
+pnpm cut
 ```
 ## Deploy
 ```sh
