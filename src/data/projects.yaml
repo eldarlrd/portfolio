@@ -9,7 +9,7 @@
     that generates a PDF for download. Made with React & Zustand.
 
 - name: Fifteen Puzzle
-  banner: 641330748/2064e49c-a90f-4d47-8b9b-c54e08a2e562
+  banner: 641330748/16f92a9e-ed77-47ef-a025-c177936ecf29
   stack:
   - tailwindcss-original
   - typescript-plain
