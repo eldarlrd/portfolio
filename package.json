@@ -38,12 +38,12 @@
   },
   "dependencies": {
     "modern-normalize": "^3.0.1",
-    "riot": "^10.0.0"
+    "riot": "^10.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "@modyfi/vite-plugin-yaml": "^1.1.1",
-    "@riotjs/compiler": "^10.0.0",
+    "@riotjs/compiler": "^10.0.1",
     "@types/node": "^24.3.0",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
@@ -55,11 +55,11 @@
     "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "jiti": "^2.5.1",
-    "knip": "^5.63.0",
+    "knip": "^5.63.1",
     "prettier": "^3.6.2",
     "rollup-plugin-riot": "^10.0.0",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.41.0",
-    "vite": "^7.1.3"
+    "typescript-eslint": "^8.42.0",
+    "vite": "^7.1.4"
   }
 }
