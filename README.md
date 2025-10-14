@@ -1,7 +1,7 @@
-# Portfolio | eldarlrd
+# Portfolio • eldarlrd
 [![Version](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/eldarlrd/portfolio/main/package.json&query=version&logo=git-extensions&label=version&labelColor=475569&color=0284c7)](https://github.com/eldarlrd/portfolio/blob/main/package.json)
 
-> Portfolio | eldarlrd is built using
+> Portfolio • eldarlrd is built using
 > - **[TypeScript](https://typescriptlang.org)**
 > - **[modern-normalize](https://github.com/sindresorhus/modern-normalize)**
 > - **[Font Awesome](https://fontawesome.com)**
@@ -24,7 +24,7 @@ pnpm dev
 ```
 ### Prod Build
 ```sh
-pnpm build
+pnpm bundle
 ```
 ### Preview Prod Build
 ```sh
