@@ -38,16 +38,17 @@
     Game logic has been tested in Vitest with complete coverage.
 
 - name: Todo List
-  banner: 672655216/2dae1b2c-0ad4-4fa6-91e3-908838dc8bce
+  banner: 672655216/88c9b855-e1a6-4ad4-a037-5422c969c017
   stack:
   - react-original
   - redux-original
+  - firebase-plain
   - tailwindcss-original
   - vitest-plain
   - typescript-plain
   description: A complex, project-based todo list that uses Preact, Redux,
-    date-fns, Nano ID for keys, dnd kit for the sidebar vertical drag n' drop,
-    and focus traps for accessibility and keyboard crawl.
+    Firebase for cloud storage, Nano ID for keys, dnd kit for the sidebar
+    vertical drag n' drop, focus traps for accessibility.
 
 - name: Weather App
   banner: 719001057/2b5d46d6-a1c7-4602-a24b-cc37f9a9cca2
