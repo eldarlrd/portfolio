@@ -38,7 +38,7 @@
     Game logic has been tested in Vitest with complete coverage.
 
 - name: Todo List
-  banner: 672655216/88c9b855-e1a6-4ad4-a037-5422c969c017
+  banner: 672655216/4b7918b1-d150-4add-bf30-7df68680c93a
   stack:
   - react-original
   - redux-original
