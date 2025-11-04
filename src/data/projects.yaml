@@ -28,7 +28,7 @@
     a syntax highlighter, and routing to display pure and interactive algorithms.
 
 - name: TS Battleship
-  banner: 728235696/64c12b80-542b-4439-9b84-7366203702ec
+  banner: 728235696/bc97ea82-abaa-47f3-bad3-7c371e27de63
   stack:
   - solidjs-plain
   - vitest-plain
