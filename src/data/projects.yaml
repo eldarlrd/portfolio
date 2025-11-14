@@ -31,6 +31,7 @@
   banner: 728235696/6fbd6197-0f32-4ec8-aa1a-a228b29f59cc
   stack:
   - solidjs-plain
+  - firebase-plain
   - vitest-plain
   - typescript-plain
   description: A classic board game recreated in a digital format
