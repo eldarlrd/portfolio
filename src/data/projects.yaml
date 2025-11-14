@@ -1,5 +1,5 @@
 - name: CV Maker
-  banner: 773247034/85af82d8-24d4-4f9a-ab3e-6c99ee16d608
+  banner: 773247034/443cae33-347b-46c0-833a-2e4356c9a082
   stack:
   - react-original
   - stylus-original
@@ -28,14 +28,14 @@
     a syntax highlighter, and routing to display pure and interactive algorithms.
 
 - name: TS Battleship
-  banner: 728235696/bc97ea82-abaa-47f3-bad3-7c371e27de63
+  banner: 728235696/6fbd6197-0f32-4ec8-aa1a-a228b29f59cc
   stack:
   - solidjs-plain
   - vitest-plain
   - typescript-plain
   description: A classic board game recreated in a digital format
     as a Progressive Web App using Solid & Emotion's CSS-in-JS.
-    Game logic has been tested in Vitest with complete coverage.
+    Game logic tested in Vitest with complete coverage. PvE & PvP available.
 
 - name: Todo List
   banner: 672655216/4b7918b1-d150-4add-bf30-7df68680c93a
