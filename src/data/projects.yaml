@@ -1,12 +1,12 @@
 - name: CV Maker
-  banner: 773247034/18e0a20d-71ad-4aa5-8073-7b6b79ea4f2f
+  banner: 773247034/85af82d8-24d4-4f9a-ab3e-6c99ee16d608
   stack:
   - react-original
   - stylus-original
   - typescript-plain
   description: An online tool that helps simplify the process of
     building a resume, allowing the input of relevant information
-    that generates a PDF for download. Made with React & Zustand.
+    that generates a PDF for download. Also available in Azerbaijani.
 
 - name: Fifteen Puzzle
   banner: 641330748/16f92a9e-ed77-47ef-a025-c177936ecf29
