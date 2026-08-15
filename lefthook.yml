@@ -1,0 +1,19 @@
+parallel: true
+piped: true
+commit-msg:
+  commands:
+    commitlint:
+      run: bun commitlint -e -s
+pre-commit:
+  commands:
+    fix:
+      run: bun fix && git update-index -g
+pre-push:
+  commands:
+    orphans:
+      run: bun orphans
+    cover:
+      run: bun cover
+    env:
+      run: |
+        test -f .env.local || { echo "❌ ERROR: .env.local missing"; exit 1; }

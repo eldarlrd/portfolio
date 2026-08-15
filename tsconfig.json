@@ -1,25 +1,25 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "tsBuildInfoFile": "node_modules/.tmp/tsconfig.tsbuildinfo",
-    "skipLibCheck": true,
-    "composite": true,
-    // Bundler
-    "types": ["vite/client", "@modyfi/vite-plugin-yaml/modules"],
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "paths": { "@/*": ["./src/*"] },
-    // Linting
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src", "*.d.ts"]
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"lib": ["ESNext", "DOM"],
+		"tsBuildInfoFile": "node_modules/.tmp/tsconfig.tsbuildinfo",
+		"skipLibCheck": true,
+		"composite": true,
+		// Bundler
+		"types": ["vite/client", "@modyfi/vite-plugin-yaml/modules"],
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"paths": { "@/*": ["./src/*"] },
+		// Linting
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true
+	},
+	"include": ["src", "*.d.ts"]
 }

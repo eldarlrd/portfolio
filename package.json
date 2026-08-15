@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "keywords": [
     "portfolio"
@@ -14,44 +14,31 @@
     "dev": "vite --open",
     "bundle": "tsc -b && vite build",
     "preview": "vite preview",
-    "deployer": "pnpm bundle && gh-pages -b prod -m 'build(prod): deployment' -d dist",
-    "lint": "eslint src",
-    "pretty": "prettier 'src/**/*.ts' --write",
-    "fix": "pnpm lint --fix && pnpm pretty",
-    "orphans": "knip --cache"
+    "deployer": "bun bundle && gh-pages -b prod -m 'build(prod): deployment' -d dist",
+    "fix": "biome check --fix --unsafe --no-errors-on-unmatched --reporter=concise",
+    "orphans": "knip --cache --no-exit-code"
   },
-  "prettier": {
-    "singleQuote": true,
-    "jsxSingleQuote": true,
-    "bracketSameLine": true,
-    "trailingComma": "none",
-    "arrowParens": "avoid",
-    "experimentalTernaries": true
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "dependencies": {
     "modern-normalize": "^3.0.1",
-    "riot": "^10.1.2"
+    "riot": "^10.1.6"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
+    "@biomejs/biome": "^2.5.8",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
     "@modyfi/vite-plugin-yaml": "^1.1.1",
-    "@riotjs/compiler": "^10.0.1",
-    "@types/node": "^25.3.3",
-    "eslint": "^9.39.3",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-import-resolver-typescript": "^4.4.4",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-n": "^17.24.0",
-    "eslint-plugin-no-relative-import-paths": "^1.6.1",
-    "eslint-plugin-promise": "^7.2.1",
+    "@riotjs/compiler": "^10.0.4",
+    "@types/node": "^26.2.0",
     "gh-pages": "^6.3.0",
-    "globals": "^17.4.0",
-    "jiti": "^2.6.1",
-    "knip": "^5.85.0",
-    "prettier": "^3.8.1",
+    "knip": "^6.32.2",
     "rollup-plugin-riot": "^10.0.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1",
-    "vite": "^7.3.1"
+    "lefthook": "^2.1.10",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
   }
 }

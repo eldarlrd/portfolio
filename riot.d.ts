@@ -1,6 +1,6 @@
-declare module '*.riot' {
-  import { type RiotComponentWrapper } from 'riot';
+declare module "*.riot" {
+	import { type RiotComponentWrapper } from "riot";
 
-  const componentWrapper: RiotComponentWrapper;
-  export default componentWrapper;
+	const componentWrapper: RiotComponentWrapper;
+	export default componentWrapper;
 }
