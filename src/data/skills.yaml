@@ -37,6 +37,9 @@
 - name: Next.js
   icon: nextjs-plain
 
+- name: Svelte
+  icon: svelte-plain
+
 - name: Solid
   icon: solidjs-plain
 
@@ -46,14 +49,11 @@
 - name: SCSS
   icon: sass-original
 
-- name: PostCSS
-  icon: postcss-original
-
-- name: Stylus
-  icon: stylus-original
-
 - name: Tailwind
   icon: tailwindcss-original
+
+- name: Chakra UI
+  icon: chakraui-plain
 
 - name: Bootstrap
   icon: bootstrap-plain
@@ -67,8 +67,8 @@
 - name: Jest
   icon: jest-plain
 
-- name: ESLint
-  icon: eslint-plain
+- name: Biome
+  icon: biome-original
 
 - name: Vite
   icon: vitejs-plain
