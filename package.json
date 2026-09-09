@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "keywords": [
     "portfolio"
@@ -9,7 +9,7 @@
   "description": "eldarlrd's portfolio",
   "repository": "github:eldarlrd/portfolio",
   "homepage": "https://eldarlrd.is-a.dev/portfolio",
-  "author": "Eldar Pashazade <eldarlrd@pm.me> (https://eldarlrd.is-a.dev)",
+  "author": "Eldar Paşazadə <eldarlrd@pm.me> (https://eldarlrd.is-a.dev)",
   "scripts": {
     "dev": "vite --open",
     "bundle": "tsc -b && vite build",
