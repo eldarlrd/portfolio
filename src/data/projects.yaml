@@ -1,5 +1,5 @@
 - name: CV Maker
-  banner: 773247034/443cae33-347b-46c0-833a-2e4356c9a082
+  banner: 773247034/9b2f060a-293d-4285-8075-500eb9c3b9b0
   stack:
   - react-original
   - stylus-original
@@ -18,7 +18,7 @@
     correct placements made with TypeScript and Tailwind CSS.
 
 - name: JS Algorithms
-  banner: 544421143/56c65b1e-07c4-4ea3-9055-15db58c22ee2
+  banner: 544421143/52c44920-17a8-43aa-9188-ae15321b5116
   stack:
   - react-original
   - reactrouter-plain
@@ -52,7 +52,7 @@
     vertical drag n' drop, focus traps for accessibility.
 
 - name: Weather App
-  banner: 719001057/2b5d46d6-a1c7-4602-a24b-cc37f9a9cca2
+  banner: 719001057/f4ca86c4-53cd-48c4-ac4a-0971e8c7ccd4
   stack:
   - html5-plain
   - css3-plain
